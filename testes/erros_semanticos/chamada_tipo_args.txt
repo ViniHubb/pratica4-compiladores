@@ -1,0 +1,8 @@
+int dobrarValor(int a) {
+    return 2 * a;
+}
+principal() {
+    int x;
+    x = dobrarValor("dez");      // string no lugar de int
+    x = dobrarValor(2.5);        // float no lugar de int
+}

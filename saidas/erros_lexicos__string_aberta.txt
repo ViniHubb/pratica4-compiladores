@@ -1,0 +1,3 @@
+ERRO LEXICO na linha 1: string sem aspas de fechamento '"sem fim;'
+ERRO SINTATICO na linha 2: syntax error, unexpected PRINCIPAL (perto de 'principal')
+Programa com 2 erro(s). Codigo intermediario nao gerado.

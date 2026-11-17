@@ -1,0 +1,7 @@
+// valido: chamada usada como comando (valor de retorno descartado)
+int exibirResultado(int v) {
+    int copia = v;
+}
+principal() {
+    exibirResultado(1);
+}

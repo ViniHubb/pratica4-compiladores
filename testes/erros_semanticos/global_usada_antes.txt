@@ -1,0 +1,8 @@
+// a global so e declarada depois da funcao que a usa
+int pegarValor() {
+    return LIMITE;
+}
+
+int LIMITE = 10;
+
+principal() { }

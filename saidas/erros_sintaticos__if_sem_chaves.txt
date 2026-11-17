@@ -1,0 +1,2 @@
+ERRO SINTATICO na linha 3: syntax error, unexpected ID_LOCAL, expecting ABRE_CHAVE (perto de 'x')
+Programa com 1 erro(s). Codigo intermediario nao gerado.

@@ -1,0 +1,23 @@
+// globais x locais e escopo de bloco
+int TOTAL = 0;
+
+int contarAte(int limite) {
+    int i = 0;
+    while (i < limite) {
+        int passo = 1;          // so existe dentro do while
+        i = i + passo;
+        if (i == 3) {
+            int bonus = 100;    // so existe dentro do if
+            TOTAL = TOTAL + bonus;
+        } else {
+            int bonus = 1;      // permitido: bloco irmao, o outro bonus ja saiu de escopo
+            TOTAL = TOTAL + bonus;
+        }
+    }
+    return i;
+}
+
+principal() {
+    int x = contarAte(5);
+    TOTAL = TOTAL + x;
+}

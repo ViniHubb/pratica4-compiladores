@@ -1,0 +1,63 @@
+Analise lexica concluida.
+Analise sintatica concluida.
+Analise semantica concluida.
+
+===== Tabela de simbolos =====
+Nome             Categoria   Tipo    Escopo             Nivel Linha  Parametros
+SOMA             var global  int     global             0     1      -
+a                parametro   int     calcularSoma       1     3      -
+b                parametro   int     calcularSoma       1     3      -
+calcularSoma     funcao      int     global             0     3      (int, int)
+resultado        var local   int     calcularSoma       1     4      -
+principal        funcao      int     global             0     9      ()
+x                var local   int     principal          1     10     -
+y                var local   int     principal          1     11     -
+
+===== Codigo intermediario (tres enderecos) =====
+
+calcularSoma:
+    t1 = a + b
+    resultado = t1
+    return resultado
+
+principal:
+    x = 10
+    y = 20
+    param x
+    param y
+    t2 = call calcularSoma, 2
+    SOMA = t2
+    ifFalse SOMA > 20 goto L1
+    t3 = x + 1
+    x = t3
+L1:
+L2:
+    ifFalse x < SOMA goto L3
+    t4 = x + 1
+    x = t4
+    goto L2
+L3:
+
+===== Quadruplas =====
+N    op         arg1             arg2       result
+0    func       -                -          calcularSoma
+1    +          a                b          t1
+2    =          t1               -          resultado
+3    return     resultado        -          -
+4    func       -                -          principal
+5    =          10               -          x
+6    =          20               -          y
+7    param      x                -          -
+8    param      y                -          -
+9    call       calcularSoma     2          t2
+10   =          t2               -          SOMA
+11   ifFalse>   SOMA             20         L1
+12   +          x                1          t3
+13   =          t3               -          x
+14   label      -                -          L1
+15   label      -                -          L2
+16   ifFalse<   x                SOMA       L3
+17   +          x                1          t4
+18   =          t4               -          x
+19   goto       -                -          L2
+20   label      -                -          L3

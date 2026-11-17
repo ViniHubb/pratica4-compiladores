@@ -1,0 +1,23 @@
+// float x int, bool, string e comparacoes
+float MEDIA;
+bool APROVADO = false;
+string NOME = "aluno";
+
+float calcularMedia(float a, float b) {
+    return (a + b) / 2;
+}
+
+principal() {
+    int nota1 = 7;
+    float nota2 = 8.5;
+    bool passou;
+    MEDIA = calcularMedia(nota1, nota2);
+    passou = MEDIA >= 6;
+    APROVADO = passou;
+    if (APROVADO == true) {
+        NOME = "aprovado";
+    }
+    if (NOME != "aluno") {
+        nota1 = -nota1;
+    }
+}

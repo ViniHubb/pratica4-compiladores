@@ -1,0 +1,19 @@
+// programa de exemplo
+int CONTADOR = 0;
+
+int somarValores(int a, int b) {
+    return a + b;
+}
+
+principal() {
+    int x = 10;
+    while (x >= 0) {
+        if (x != 5) {
+            CONTADOR = somarValores(CONTADOR, x);
+        } else {
+            x = x - 1;
+        }
+        x = x - 1;
+    }
+    int Errado = 3 @ 2;
+}

@@ -1,0 +1,5 @@
+ERRO SEMANTICO na linha 2: 'pegarNome' deve retornar int, mas a expressao e string
+ERRO SEMANTICO na linha 6: condicao do if deve ser bool, mas e int
+ERRO SEMANTICO na linha 9: condicao do while deve ser bool, mas e int
+ERRO SEMANTICO na linha 12: 'principal' nao tem tipo de retorno e nao pode retornar valor
+Programa com 4 erro(s). Codigo intermediario nao gerado.

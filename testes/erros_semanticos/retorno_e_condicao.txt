@@ -1,0 +1,13 @@
+int pegarNome() {
+    return "nome";               // int nao pode retornar string
+}
+principal() {
+    int x = 2;
+    if (x) {                     // condicao deve ser bool
+        x = 1;
+    }
+    while (x + 1) {              // condicao deve ser bool
+        x = 0;
+    }
+    return 0;                    // principal() sem tipo nao retorna valor
+}

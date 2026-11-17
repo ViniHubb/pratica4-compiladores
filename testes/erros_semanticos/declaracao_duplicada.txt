@@ -1,0 +1,14 @@
+int TOTAL;
+float TOTAL;              // global duplicada
+
+int somarValores(int a, int a) {   // parametro repetido
+    int r;
+    int r;                // local duplicada no mesmo escopo
+    return a;
+}
+
+int somarValores(int b) { // funcao duplicada
+    return b;
+}
+
+principal() { }

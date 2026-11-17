@@ -1,0 +1,4 @@
+ERRO SEMANTICO na linha 1: nao e possivel inicializar 'CONTADOR' (int) com valor do tipo string
+ERRO SEMANTICO na linha 5: atribuicao incompativel: 'x' e int, mas a expressao e float
+ERRO SEMANTICO na linha 6: atribuicao incompativel: 'ok' e bool, mas a expressao e int
+Programa com 3 erro(s). Codigo intermediario nao gerado.

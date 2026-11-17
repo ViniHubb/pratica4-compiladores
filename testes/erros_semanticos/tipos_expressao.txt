@@ -1,0 +1,10 @@
+principal() {
+    int x = 1;
+    string s = "a";
+    bool b = true;
+    x = s + 1;            // string em soma
+    x = b * 2;            // bool em multiplicacao
+    b = s < "b";          // < so para numeros
+    b = x == s;           // int comparado com string
+    x = -s;               // menos unario em string
+}

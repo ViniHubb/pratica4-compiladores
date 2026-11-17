@@ -1,0 +1,7 @@
+int CONTADOR = "zero";    // string em int
+principal() {
+    int x;
+    bool ok;
+    x = 3.5;              // float em int (sem conversao implicita)
+    ok = 1;               // int em bool
+}

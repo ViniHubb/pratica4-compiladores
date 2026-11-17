@@ -1,0 +1,2 @@
+ERRO SINTATICO na linha 2: syntax error, unexpected PONTO_VIRGULA (perto de ';')
+Programa com 1 erro(s). Codigo intermediario nao gerado.

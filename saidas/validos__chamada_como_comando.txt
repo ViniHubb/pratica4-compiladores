@@ -1,0 +1,27 @@
+Analise lexica concluida.
+Analise sintatica concluida.
+Analise semantica concluida.
+
+===== Tabela de simbolos =====
+Nome             Categoria   Tipo    Escopo             Nivel Linha  Parametros
+v                parametro   int     exibirResultado    1     2      -
+exibirResultado  funcao      int     global             0     2      (int)
+copia            var local   int     exibirResultado    1     3      -
+principal        funcao      void    global             0     5      ()
+
+===== Codigo intermediario (tres enderecos) =====
+
+exibirResultado:
+    copia = v
+
+principal:
+    param 1
+    t1 = call exibirResultado, 1
+
+===== Quadruplas =====
+N    op         arg1             arg2       result
+0    func       -                -          exibirResultado
+1    =          v                -          copia
+2    func       -                -          principal
+3    param      1                -          -
+4    call       exibirResultado  1          t1

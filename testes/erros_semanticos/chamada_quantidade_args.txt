@@ -1,0 +1,8 @@
+int somarValores(int a, int b) {
+    return a + b;
+}
+principal() {
+    int x;
+    x = somarValores(1);         // falta argumento
+    x = somarValores(1, 2, 3);   // argumento a mais
+}

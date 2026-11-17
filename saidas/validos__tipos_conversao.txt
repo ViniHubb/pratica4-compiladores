@@ -1,0 +1,75 @@
+Analise lexica concluida.
+Analise sintatica concluida.
+Analise semantica concluida.
+
+===== Tabela de simbolos =====
+Nome             Categoria   Tipo    Escopo             Nivel Linha  Parametros
+MEDIA            var global  float   global             0     2      -
+APROVADO         var global  bool    global             0     3      -
+NOME             var global  string  global             0     4      -
+a                parametro   float   calcularMedia      1     6      -
+b                parametro   float   calcularMedia      1     6      -
+calcularMedia    funcao      float   global             0     6      (float, float)
+principal        funcao      void    global             0     10     ()
+nota1            var local   int     principal          1     11     -
+nota2            var local   float   principal          1     12     -
+passou           var local   bool    principal          1     13     -
+
+===== Codigo intermediario (tres enderecos) =====
+    APROVADO = false
+    NOME = "aluno"
+
+calcularMedia:
+    t1 = a + b
+    t2 = (float) 2
+    t3 = t1 / t2
+    return t3
+
+principal:
+    nota1 = 7
+    nota2 = 8.5
+    t4 = (float) nota1
+    param t4
+    param nota2
+    t5 = call calcularMedia, 2
+    MEDIA = t5
+    t6 = (float) 6
+    t7 = MEDIA >= t6
+    passou = t7
+    APROVADO = passou
+    ifFalse APROVADO == true goto L1
+    NOME = "aprovado"
+L1:
+    ifFalse NOME != "aluno" goto L2
+    t8 = - nota1
+    nota1 = t8
+L2:
+
+===== Quadruplas =====
+N    op         arg1             arg2       result
+0    =          false            -          APROVADO
+1    =          "aluno"          -          NOME
+2    func       -                -          calcularMedia
+3    +          a                b          t1
+4    itof       2                -          t2
+5    /          t1               t2         t3
+6    return     t3               -          -
+7    func       -                -          principal
+8    =          7                -          nota1
+9    =          8.5              -          nota2
+10   itof       nota1            -          t4
+11   param      t4               -          -
+12   param      nota2            -          -
+13   call       calcularMedia    2          t5
+14   =          t5               -          MEDIA
+15   itof       6                -          t6
+16   >=         MEDIA            t6         t7
+17   =          t7               -          passou
+18   =          passou           -          APROVADO
+19   ifFalse==  APROVADO         true       L1
+20   =          "aprovado"       -          NOME
+21   label      -                -          L1
+22   ifFalse!=  NOME             "aluno"    L2
+23   minus      nota1            -          t8
+24   =          t8               -          nota1
+25   label      -                -          L2

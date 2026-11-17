@@ -1,0 +1,2 @@
+ERRO SINTATICO na linha 2: syntax error, unexpected ID_GLOBAL, expecting ID_LOCAL (perto de 'TOTAL')
+Programa com 1 erro(s). Codigo intermediario nao gerado.

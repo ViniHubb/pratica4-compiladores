@@ -1,0 +1,2 @@
+int Contador = 0;
+principal() { }

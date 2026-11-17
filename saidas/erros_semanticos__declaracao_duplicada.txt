@@ -1,0 +1,5 @@
+ERRO SEMANTICO na linha 2: 'TOTAL' ja foi declarada neste escopo (linha 1)
+ERRO SEMANTICO na linha 4: parametro 'a' repetido em 'somarValores'
+ERRO SEMANTICO na linha 6: 'r' ja foi declarada neste escopo (linha 5)
+ERRO SEMANTICO na linha 10: funcao 'somarValores' ja foi declarada (linha 4)
+Programa com 4 erro(s). Codigo intermediario nao gerado.

@@ -1,0 +1,4 @@
+ERRO LEXICO na linha 18: identificador fora das convencoes 'Errado'
+ERRO SINTATICO na linha 18: syntax error, unexpected ATRIBUICAO, expecting ID_LOCAL (perto de '=')
+ERRO LEXICO na linha 18: caractere invalido '@'
+Programa com 3 erro(s). Codigo intermediario nao gerado.

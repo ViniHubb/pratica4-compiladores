@@ -1,0 +1,4 @@
+int somaTotal(int a) {
+    return a;
+}
+principal() { }

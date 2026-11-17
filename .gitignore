@@ -1,0 +1,12 @@
+# arquivos gerados pelo make
+compilador
+compilador.exe
+sintatico.tab.c
+sintatico.tab.h
+lex.yy.c
+*.o
+*.tac
+
+# Google Drive / sistema
+desktop.ini
+.DS_Store

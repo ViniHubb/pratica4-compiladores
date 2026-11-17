@@ -1,0 +1,76 @@
+Analise lexica concluida.
+Analise sintatica concluida.
+Analise semantica concluida.
+
+===== Tabela de simbolos =====
+Nome             Categoria   Tipo    Escopo             Nivel Linha  Parametros
+TOTAL            var global  int     global             0     2      -
+limite           parametro   int     contarAte          1     4      -
+contarAte        funcao      int     global             0     4      (int)
+i                var local   int     contarAte          1     5      -
+passo            var local   int     contarAte          2     7      -
+bonus            var local   int     contarAte          3     10     -
+bonus            var local   int     contarAte          3     13     -
+principal        funcao      void    global             0     20     ()
+x                var local   int     principal          1     21     -
+
+===== Codigo intermediario (tres enderecos) =====
+    TOTAL = 0
+
+contarAte:
+    i = 0
+L1:
+    ifFalse i < limite goto L2
+    passo = 1
+    t1 = i + passo
+    i = t1
+    ifFalse i == 3 goto L3
+    bonus = 100
+    t2 = TOTAL + bonus
+    TOTAL = t2
+    goto L4
+L3:
+    bonus = 1
+    t3 = TOTAL + bonus
+    TOTAL = t3
+L4:
+    goto L1
+L2:
+    return i
+
+principal:
+    param 5
+    t4 = call contarAte, 1
+    x = t4
+    t5 = TOTAL + x
+    TOTAL = t5
+
+===== Quadruplas =====
+N    op         arg1             arg2       result
+0    =          0                -          TOTAL
+1    func       -                -          contarAte
+2    =          0                -          i
+3    label      -                -          L1
+4    ifFalse<   i                limite     L2
+5    =          1                -          passo
+6    +          i                passo      t1
+7    =          t1               -          i
+8    ifFalse==  i                3          L3
+9    =          100              -          bonus
+10   +          TOTAL            bonus      t2
+11   =          t2               -          TOTAL
+12   goto       -                -          L4
+13   label      -                -          L3
+14   =          1                -          bonus
+15   +          TOTAL            bonus      t3
+16   =          t3               -          TOTAL
+17   label      -                -          L4
+18   goto       -                -          L1
+19   label      -                -          L2
+20   return     i                -          -
+21   func       -                -          principal
+22   param      5                -          -
+23   call       contarAte        1          t4
+24   =          t4               -          x
+25   +          TOTAL            x          t5
+26   =          t5               -          TOTAL

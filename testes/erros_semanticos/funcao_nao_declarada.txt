@@ -1,0 +1,5 @@
+principal() {
+    int x;
+    x = calcularTotal(3);        // nao existe
+    exibirResultado();           // nao existe
+}

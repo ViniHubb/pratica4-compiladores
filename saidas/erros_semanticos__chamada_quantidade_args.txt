@@ -1,0 +1,3 @@
+ERRO SEMANTICO na linha 6: funcao 'somarValores' espera 2 argumento(s), mas recebeu 1
+ERRO SEMANTICO na linha 7: funcao 'somarValores' espera 2 argumento(s), mas recebeu 3
+Programa com 2 erro(s). Codigo intermediario nao gerado.

@@ -1,0 +1,12 @@
+// uma local de bloco nao pode esconder outra local ou parametro visivel
+int contarAte(int limite) {
+    int i = 0;
+    while (i < limite) {
+        int i = 5;              // esconde a local i (linha 3)
+        if (i > 2) {
+            int limite = 1;     // esconde o parametro limite
+        }
+    }
+    return i;
+}
+principal() { }

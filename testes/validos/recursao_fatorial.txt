@@ -1,0 +1,18 @@
+// recursao, if-else e chamada aninhada
+int calcularFatorial(int n) {
+    if (n <= 1) {
+        return 1;
+    } else {
+        return n * calcularFatorial(n - 1);
+    }
+}
+
+int somarDobro(int a, int b) {
+    return 2 * (a + b);
+}
+
+int principal() {
+    int r;
+    r = somarDobro(calcularFatorial(3), calcularFatorial(4));
+    return r;
+}

@@ -1,0 +1,6 @@
+ERRO SEMANTICO na linha 5: operador '+' nao se aplica aos tipos string e int
+ERRO SEMANTICO na linha 6: operador '*' nao se aplica aos tipos bool e int
+ERRO SEMANTICO na linha 7: operador '<' exige operandos numericos, mas recebeu string e string
+ERRO SEMANTICO na linha 8: operador '==' compara tipos incompativeis: int e string
+ERRO SEMANTICO na linha 9: menos unario nao se aplica ao tipo string
+Programa com 5 erro(s). Codigo intermediario nao gerado.

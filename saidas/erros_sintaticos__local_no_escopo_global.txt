@@ -1,0 +1,2 @@
+ERRO SINTATICO na linha 1: syntax error, unexpected ID_LOCAL, expecting PRINCIPAL or ID_FUNCAO or ID_GLOBAL (perto de 'contador')
+Programa com 1 erro(s). Codigo intermediario nao gerado.

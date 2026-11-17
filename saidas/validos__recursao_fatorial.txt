@@ -1,0 +1,71 @@
+Analise lexica concluida.
+Analise sintatica concluida.
+Analise semantica concluida.
+
+===== Tabela de simbolos =====
+Nome             Categoria   Tipo    Escopo             Nivel Linha  Parametros
+n                parametro   int     calcularFatorial   1     2      -
+calcularFatorial funcao      int     global             0     2      (int)
+a                parametro   int     somarDobro         1     10     -
+b                parametro   int     somarDobro         1     10     -
+somarDobro       funcao      int     global             0     10     (int, int)
+principal        funcao      int     global             0     14     ()
+r                var local   int     principal          1     15     -
+
+===== Codigo intermediario (tres enderecos) =====
+
+calcularFatorial:
+    ifFalse n <= 1 goto L1
+    return 1
+    goto L2
+L1:
+    t1 = n - 1
+    param t1
+    t2 = call calcularFatorial, 1
+    t3 = n * t2
+    return t3
+L2:
+
+somarDobro:
+    t4 = a + b
+    t5 = 2 * t4
+    return t5
+
+principal:
+    param 3
+    t6 = call calcularFatorial, 1
+    param 4
+    t7 = call calcularFatorial, 1
+    param t6
+    param t7
+    t8 = call somarDobro, 2
+    r = t8
+    return r
+
+===== Quadruplas =====
+N    op         arg1             arg2       result
+0    func       -                -          calcularFatorial
+1    ifFalse<=  n                1          L1
+2    return     1                -          -
+3    goto       -                -          L2
+4    label      -                -          L1
+5    -          n                1          t1
+6    param      t1               -          -
+7    call       calcularFatorial 1          t2
+8    *          n                t2         t3
+9    return     t3               -          -
+10   label      -                -          L2
+11   func       -                -          somarDobro
+12   +          a                b          t4
+13   *          2                t4         t5
+14   return     t5               -          -
+15   func       -                -          principal
+16   param      3                -          -
+17   call       calcularFatorial 1          t6
+18   param      4                -          -
+19   call       calcularFatorial 1          t7
+20   param      t6               -          -
+21   param      t7               -          -
+22   call       somarDobro       2          t8
+23   =          t8               -          r
+24   return     r                -          -
