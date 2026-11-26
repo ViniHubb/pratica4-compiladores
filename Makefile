@@ -1,8 +1,8 @@
 CC     = gcc
 CFLAGS = -Wall -Wno-unused-function
-FONTES = sintatico.tab.c lex.yy.c tabela.c codigo.c semantica.c
+FONTES = sintatico.tab.c lex.yy.c tabela.c codigo.c
 
-compilador: lexico.l sintatico.y tabela.c tabela.h codigo.c codigo.h semantica.c semantica.h tipos.h
+compilador: lexico.l sintatico.y tabela.c tabela.h codigo.c codigo.h tipos.h
 	bison -d sintatico.y
 	flex lexico.l
 	$(CC) $(CFLAGS) $(FONTES) -o compilador

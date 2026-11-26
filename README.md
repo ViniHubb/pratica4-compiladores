@@ -21,9 +21,8 @@ Se houver qualquer erro (léxico, sintático ou semântico), o compilador lista 
 | Arquivo | Papel |
 |---|---|
 | `lexico.l` | Analisador léxico do TP I. Única mudança: identificadores e literais agora enviam o lexema ao Bison (`yylval.str`). |
-| `sintatico.y` | Gramática do TP I + ações semânticas (verificação e geração de código). |
+| `sintatico.y` | Gramática do TP I + análise semântica e geração de código: as ações da gramática chamam as funções de verificação (tipos, declarações, chamadas, `return`, condições), definidas no fim do próprio arquivo. |
 | `tabela.c/.h` | Tabela de símbolos com pilha de escopos. |
-| `semantica.c/.h` | Regras semânticas e geração de código: tipos, declarações, chamadas, `return`, condições. |
 | `codigo.c/.h` | Quádruplas, `novo_temp()`, `novo_rotulo()` e impressão. |
 | `tipos.h` | Tipos da linguagem (`int`, `float`, `bool`, `string`). |
 | `testes/` | `validos/`, `erros_lexicos/`, `erros_sintaticos/` (do TP I) e `erros_semanticos/` (novos). |
